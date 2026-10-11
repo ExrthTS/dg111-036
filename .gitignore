@@ -4,3 +4,6 @@
 *.o
 *.obj
 *.a
+xfinal_project/final_project_compro.c
+xfinal_project/testing.c
+wraylib/testcode.c
