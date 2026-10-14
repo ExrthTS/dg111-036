@@ -126,7 +126,7 @@ void TriggerScreenShake(float duration, float intensity) {
 
 int main(void) {
 
-    //Force working directory to ALWAYS be where the .exe file lives:
+    //Force working directory to ALWAYS be where the .exe file lives
     ChangeDirectory(GetApplicationDirectory());
     //To fix short Texture path doesn't work and need full path.
 
@@ -149,7 +149,7 @@ int main(void) {
 
 
     Font defaultFont = GetFontDefault();
-    //whirlHeight = screenHeight/2 - whirlSize 
+
 
     //init Camera2D
     Camera2D camera = { 0 };
@@ -209,7 +209,7 @@ int main(void) {
                 isFishTurningLeft = GetRandomValue(0, 1);
 
                 score = 0;
-                score = scoreMultiplier = 1;
+                scoreMultiplier = 1;
                 fishX = (screenWidth/2)-50;
                 tensionProgress = 0;
                 fishTimer = 0;
@@ -222,20 +222,9 @@ int main(void) {
 
                 currentState = STATE_FISHING;
 
-                //currentState = STATE_WAITING;
-                /*waitTimer = 0.0f;
-                timeToBite = (float)GetRandomValue(0, 1);
-                waitTimer += GetFrameTime();
-                if (waitTimer >= timeToBite) {
-                    currentState = STATE_FISHING;
-                    tensionProgress = 0.0f;
-                    fishTimer = 0.0f;
-                }*/
+            
             }
         } 
-        /*else if (currentState == STATE_WAITING) {
-            
-        } */
 
 
 
@@ -261,7 +250,7 @@ int main(void) {
                     }
                     TriggerScreenShake(0.3f, 6.0f);
 
-                    //Space make the whirl goes faster.
+                    //make the whirl goes faster.
                     whirlpoolTimer -= 1.5f;
                     if(whirlpoolTimer <= 1.0f) {
                         whirlpoolTimer = 1;
@@ -695,8 +684,8 @@ int main(void) {
             //DEBUG X Y
             int mouseX = GetMouseX();
             int mouseY = GetMouseY();
-            DrawCircle(mouseX, mouseY, 4.0f, RED);
-            DrawText(TextFormat("X: %d, Y: %d", mouseX, mouseY), mouseX + 12, mouseY - 10, 20, YELLOW);
+            //DrawCircle(mouseX, mouseY, 4.0f, RED);
+            //DrawText(TextFormat("X: %d, Y: %d", mouseX, mouseY), mouseX + 12, mouseY - 10, 20, YELLOW);
 
 
             EndMode2D();
